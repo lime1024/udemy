@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <h1>新しい連絡先</h1>
+    <% if @contact.errors.present? %>
+      エラーがあります。
+      <ul>
+        <% @contact.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    <% end %>
+    <form action="contacts" method="post">
+      <input type="text" name="name">
+      <input type="submit">
+    </form>
+    <div>
+      <a href="/">戻る</a>
+    </div>
+  <body>
+</html>

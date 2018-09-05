@@ -1,0 +1,36 @@
+<html>
+<head>
+  <meda charset="utf-8">
+  <title>連絡帳</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>これはErbで書きました</h1>
+  <div>
+    <a href="/contact_new">連絡先の新規作成</a>
+  </div>
+
+  <div>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>名前</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @contacts.each do |contact| %>
+          <tr>
+            <td><%= contact.id %></td>
+            <td><%= contact.name %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <footer>
+    <a href="about.html">このサービスについて</a>
+    <p>今の時刻は: <%= @now %></p>
+  </footer>
+</body>
+</html>
