@@ -5,7 +5,12 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <h1>これはErbで書きました</h1>
+  <h1>連絡帳</h1>
+
+  <% if @message %>
+    <div class="message"><%= @message %></div>
+  <% end %>
+
   <div>
     <a href="/contact_new">連絡先の新規作成</a>
   </div>
