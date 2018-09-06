@@ -14,7 +14,14 @@
       </ul>
     <% end %>
     <form action="contacts" method="post">
-      <input type="text" name="name">
+      <div>
+        <label for="contact_name">名前</label>
+        <input type="text" name="name" id="contact_name" value="<%= @contact.name %>">
+      </div>
+      <div>
+        <label for="contact_email">Email</label>
+        <input type="text" name="email" id="contact_email" value="<%= @contact.email %>">
+      </div>
       <input type="submit">
     </form>
     <div>
