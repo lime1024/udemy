@@ -8,8 +8,13 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+    <h1>ToDoアプリケーション</h1>
+    <div id="wrapper">
+      <header>
+        <%= link_to '新しいTodo', new_todo_path %>
+      </header>
+      <%= yield %>
+    </div>
   </body>
 </html>
